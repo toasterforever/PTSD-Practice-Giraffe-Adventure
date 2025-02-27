@@ -30,6 +30,10 @@ public:
     // TODO: Implement the collision detection
     [[nodiscard]] bool IfCollides(const std::shared_ptr<Character>& other) const {
         (void) other;
+        if ( abs(other->GetPosition().x - this->GetPosition().x )<=35 && abs(other->GetPosition().y - this->GetPosition().y )<=70 )
+        {
+            return true;
+        }
         return false;
     }
 
